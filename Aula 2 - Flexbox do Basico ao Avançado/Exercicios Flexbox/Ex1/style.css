@@ -6,7 +6,16 @@ nav{
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 400px;
+  display: flex; /*torna a caixa flexivel*/
+  flex-direction: row; /*muda a direção dos itens*/
+  justify-content: center; /*Alinha horizontalmente*/
+  align-items: center; /*Alinha verticalmente*/
+  flex-wrap: wrap; /*Permite pular linha*/
+  align-content: flex-end; /* ALinha verticalmente as linhas após o wrap*/
   }
+
+
 
   & a:link,
   & a:visited {
@@ -19,3 +28,17 @@ nav{
     text-decoration: none;
   }
 }
+
+
+ul li:first-child{
+  flex-grow: 1;
+  order: 0;
+  flex-basis: 1000px;
+}
+
+ul > *{
+
+  flex-shrink: 1; /*Determina como os items vão encolher*/
+  flex-grow: 1;
+}
+

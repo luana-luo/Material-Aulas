@@ -5,6 +5,7 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
   
   & li {
     background-color: #4d7298;
@@ -15,3 +16,14 @@ ul {
   }
 }
 
+ul > *{
+  flex: 1;
+  /*flex-grow: 1;
+  flex-shrink:1;
+  flex-basis:0; */
+}
+
+ul li:last-child{
+  align-self: flex-end;
+
+}
